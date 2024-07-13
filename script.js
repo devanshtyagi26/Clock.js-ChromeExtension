@@ -5,6 +5,13 @@ setInterval(function () {
   let displayMinute = currentdate.getMinutes();
   let displaySeconds = currentdate.getSeconds();
 
+  if (currentdate.getHours() > 12) {
+    displayHour = currentdate.getHours() - 12;
+    if (displayHour < 10) {
+      displayHour = "0" + displayHour;
+    }
+  }
+
   if (currentdate.getHours() < 10) {
     displayHour = "0" + currentdate.getHours();
   }
